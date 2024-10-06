@@ -1,19 +1,25 @@
-import os
+from flask import Flask, render_template, jsonify
 import pandas as pd
 
+# Importing the dataset -------------------------------
 file_path = "./gii_countries.csv"
+pd.set_option('display.max_columns', None)
 try:
-    df = pd.read_csv(file_path, encoding='ISO-8859-1')  # or try 'latin1'
+    df = pd.read_csv(file_path, encoding='ISO-8859-1')
 except Exception as e:
     print(f"Error reading the CSV file: {e}")
+# -----------------------------------------------------
+app = Flask(__name__)
+def index():
+    return render_template('index.html')
+# -----------------------------------------------------
 
-# Filter the DataFrame to keep only the desired columns
-# Specify the columns you want to keep
-columns_to_keep = ['iso3', 'country', 'hdicode'] + [f'gii_{year}' for year in range(1990, 2023)]
+@app.route('/')
+def index():
+    years = list(range(1990, 2019))  # Adjust according to your data
+    gii_data = {year: df[[ 'iso3', 'country', f'gii_{year}']].dropna().to_dict(orient='records') for year in years}
 
-# Create a new DataFrame with only the specified columns
-filtered_df = df[columns_to_keep]
+    return render_template('index.html', gii_data=gii_data)
 
-# Display the filtered DataFrame
-print(filtered_df)
-print(df.columns)
+if __name__ == '__main__':
+    app.run(debug=True)

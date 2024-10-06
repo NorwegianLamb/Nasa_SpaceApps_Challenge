@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GII Interactive Map</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Interactive World Map of GII</h1>
+    <div id="map"></div>
+    
+    <div id="controls">
+        <input type="range" id="yearSlider" min="1990" max="2018" value="2018" step="1">
+        <label for="yearSlider">Year: <span id="yearValue">2018</span></label>
+    </div>
+    
+    <script>
+        const giiData = {{ gii_data|tojson }};
+        
+        function updateMap(year) {
+            const data = giiData[year];
+            const countries = data.map(d => d.iso3);
+            const giiValues = data.map(d => d[`gii_${year}`]);
+
+            const mapData = [{
+                type: 'choropleth',
+                colorscale: 'Viridis',
+                reversescale: true,
+                z: giiValues,
+                locations: countries,
+                locationmode: 'ISO-3',
+                text: data.map(d => `${d.country}: ${d[`gii_${year}`]}`),
+                colorbar: {
+                    title: 'GII'
+                }
+            }];
+
+            const layout = {
+                title: `Gender Inequality Index in ${year}`,
+                geo: {
+                    showframe: false,
+                    projection: {
+                        type: 'mercator'
+                    }
+                }
+            };
+
+            Plotly.newPlot('map', mapData, layout);
+        }
+
+        $(document).ready(function() {
+            $('#yearSlider').on('input', function() {
+                const year = $(this).val();
+                $('#yearValue').text(year);
+                updateMap(year);
+            });
+
+            // Initialize the map with the latest year
+            updateMap(2018);
+        });
+    </script>
+</body>
+</html>

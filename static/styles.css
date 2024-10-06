@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack elements vertically */
+    height: 100vh; /* Make body full height */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+#map {
+    flex: 1; /* Allow map to grow and take available space */
+    width: 100vw; /* Full width of the viewport */
+    height: calc(100vh - 140px); /* Adjust height considering controls and title */
+    border: 2px solid #ccc; /* Optional border */
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+#controls {
+    text-align: center; /* Center controls */
+    height: 80px; /* Set a fixed height for controls */
+    margin: 10px; /* Add space around controls */
+}
+
+#yearSlider {
+    width: 80%; /* Make the slider slightly smaller */
+    margin: 10px auto; /* Center the slider */
+}
+
+label {
+    font-weight: bold; /* Make label text bold */
+}
+abody {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack elements vertically */
+    height: 100vh; /* Make body full height */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+#map {
+    flex: 1; /* Allow map to grow and take available space */
+    width: 100vw; /* Full width of the viewport */
+    height: calc(100vh - 100px); /* Adjust height considering controls and title */
+    border: 2px solid #ccc; /* Optional border */
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+#controls {
+    text-align: center; /* Center controls */
+    height: 80px; /* Set a fixed height for controls */
+    margin: 10px; /* Add space around controls */
+}
+
+#yearSlider {
+    width: 80%; /* Make the slider slightly smaller */
+    margin: 10px auto; /* Center the slider */
+}
+
+label {
+    font-weight: bold; /* Make label text bold */
+}
