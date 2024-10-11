@@ -28,6 +28,10 @@ Gender inequality and social exclusion increase the negative effects of environm
 Women’s dependence on and unequal access to land, water, and other resources and productive assets - which are compounded by limited mobility and decision-making power in many contexts - mean that they are disproportionately affected by climate change. 
 
 ## Project Description
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2a35816f-7e33-4806-9de5-4aed43339967" />
+</p>
+
 A devastating fact is that after a **natural disaster**, women are more likely to become **victim of domestic and sexual violence** and may avoid using shelter from fear.
 
 A study examining intimate partner violence after Hurricane Katrina, which hit the USA in 2005, revealed that **psychological victimization** of women and men increased by **35%** and **17%** respectively six months after the cyclone, while **physical victimization** of women increased by **98%**.
