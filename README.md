@@ -29,7 +29,7 @@ Women’s dependence on and unequal access to land, water, and other resources a
 
 ## Project Description
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/2a35816f-7e33-4806-9de5-4aed43339967" />
+  <img src="https://github.com/user-attachments/assets/6011d205-6d39-4026-a9fa-2151daec87c5" />
 </p>
 
 A devastating fact is that after a **natural disaster**, women are more likely to become **victim of domestic and sexual violence** and may avoid using shelter from fear.
