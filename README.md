@@ -47,4 +47,5 @@ Because of existing social norms that dictate the roles and responsibilities sui
 This project was meant to find the **relationship between violence towards women before and after natural disasters**, enabling international framework to **plan** gender-responsive actions to help as many victims as possible and **predicting** which countries will require more help after disasters.
 
 ## References
-[...]
+
+Missing data from world bank + setup difference graphs [...]
